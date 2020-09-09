@@ -53,6 +53,16 @@ def uuenda_element(nimetus, hind, kogus):
     else:
         elemendid[nimetused.index(nimetus)] = {'nimetus':nimetus, 'hind':hind, 'kogus':kogus}
 
+# kustutame KONKREETSE elemendi
+def kustuta_element(nimetus):
+    global elemendid
+    nimetused = []
+    for element in elemendid:
+        nimetused.append(list(element.values())[0])
+    if nimetus not in nimetused:
+        return "Elementi {} ei saa uuendada, kuna ta ei eksisteeri".format(nimetus)
+    else:
+        elemendid.remove(elemendid[nimetused.index(nimetus)])
 
 def main():
 
@@ -76,10 +86,14 @@ def main():
     loe_elemendid()
     #print(elemendid)
 
-    uuenda_element("vein", 10.0, 10)
-    print(loe_element("vein"))
+    #uuenda_element("vein", 10.0, 10)
+    #print(loe_element("vein"))
 
-   # print(loe_element('vein'))
-# käivitamine
+    kustuta_element("vein")
+
+    print(loe_elemendid())
+
+    #print(loe_element('vein'))
+#käivitamine
 if __name__ == '__main__':
      main()
