@@ -6,8 +6,8 @@ def lisa_element(nimetus, hind, kogus):
     global elemendid
     nimetused = []
     for element in elemendid:
-        if nimetus in element.values():
             nimetused.append(nimetus)
+            nimetused.append(list(element.values())[0])
     if nimetus in nimetused:
         print("Elemendid {} on juba olemas".format(nimetus))
     else:
@@ -36,12 +36,22 @@ def loe_element(nimetus):
     global elemendid
     nimetused = []
     for element in elemendid:
-        if nimetus in element.values():
             nimetused.append(list(element.values())[0])
     if nimetus not in nimetused:
-        print("Elemendid {} ei eksisteeri".format(nimetus))
+        return "Elemendid {} ei eksisteeri".format(nimetus)
     else:
         return elemendid[nimetused.index(nimetus)]
+
+# uuendame KONKREETSE elemendi
+def uuenda_element(nimetus, hind, kogus):
+    global elemendid
+    nimetused = []
+    for element in elemendid:
+        nimetused.append(list(element.values())[0])
+    if nimetus not in nimetused:
+        return "Elementi {} ei saa uuendada, kuna ta ei eksisteeri".format(nimetus)
+    else:
+        elemendid[nimetused.index(nimetus)] = {'nimetus':nimetus, 'hind':hind, 'kogus':kogus}
 
 
 def main():
@@ -55,18 +65,21 @@ def main():
 
     # testime elementide lisamist.
     lisa_elemendid(katse_elemendid)
-    print(elemendid)
+    #print(elemendid)
 
     lisa_element('kohupiim', 0.80, 15)
-    print(elemendid)
+    #print(elemendid)
 
     lisa_element('vein', 0.80, 5)
-    print(elemendid)
+    #print(elemendid)
 
     loe_elemendid()
-    print(elemendid)
+    #print(elemendid)
 
-    print(loe_element('vein'))
+    uuenda_element("vein", 10.0, 10)
+    print(loe_element("vein"))
+
+   # print(loe_element('vein'))
 # käivitamine
 if __name__ == '__main__':
      main()
