@@ -64,6 +64,11 @@ def kustuta_element(nimetus):
     else:
         elemendid.remove(elemendid[nimetused.index(nimetus)])
 
+# kustutame KÕIK elemendid
+def kustutaKÕIK_elemendid():
+    global elemendid
+    elemendid.clear()
+
 def main():
 
     # loome katse andmestik
@@ -89,8 +94,8 @@ def main():
     #uuenda_element("vein", 10.0, 10)
     #print(loe_element("vein"))
 
-    kustuta_element("vein")
-
+    #kustuta_element("vein")
+    kustutaKÕIK_elemendid()
     print(loe_elemendid())
 
     #print(loe_element('vein'))
