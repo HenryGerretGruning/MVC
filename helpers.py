@@ -11,16 +11,23 @@ def lisa_elemendid(elemendid_nimekiri):
     global elemendid
     elemendid = elemendid_nimekiri
 
-# loome katse andmestik
-katse_elemendid = [
-        {'nimetus': 'leib', 'hind': 0.80, 'kogus': 20},
-        {'nimetus': 'piim', 'hind': 0.50, 'kogus': 15},
-        {'nimetus': 'vein', 'hind': 5.60, 'kogus': 5},
-]
+def main():
 
-# testime elementide lisamist.
-lisa_elemendid(katse_elemendid)
-print(elemendid)
+    # loome katse andmestik
+    katse_elemendid = [
+            {'nimetus': 'leib', 'hind': 0.80, 'kogus': 20},
+            {'nimetus': 'piim', 'hind': 0.50, 'kogus': 15},
+            {'nimetus': 'vein', 'hind': 5.60, 'kogus': 5},
+    ]
 
-lisa_element('kohupiim', 0.80, 15)
-print(elemendid)
+    # testime elementide lisamist.
+    lisa_elemendid(katse_elemendid)
+    print(elemendid)
+
+    lisa_element('kohupiim', 0.80, 15)
+    print(elemendid)
+
+
+# käivitamine
+if __name__ == '__main__':
+     main()
