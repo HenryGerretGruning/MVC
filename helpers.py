@@ -1,3 +1,4 @@
+
 elemendid = []
 
 # lisame ELEMENT juurde
@@ -102,3 +103,5 @@ def main():
 #käivitamine
 if __name__ == '__main__':
      main()
+
+
