@@ -20,6 +20,18 @@ def lisa_element(nimetus, hind, kogus):
 def lisa_elemendid(elemendid_nimekiri):
     global elemendid
     elemendid = elemendid_nimekiri
+# loeme ELEMENDID korraga, aga nii, et tagastame iga kord üks element
+
+def loe_elemendid():
+    global elemendid
+    loetud_elemendid = []
+    for element in elemendid:
+        loetud_elemendid.append(element)
+    return loetud_elemendid
+
+
+
+
 
 def main():
 
@@ -37,7 +49,10 @@ def main():
     lisa_element('kohupiim', 0.80, 15)
     print(elemendid)
 
-    lisa_element('leib', 0.80, 5)
+    lisa_element('vein', 0.80, 5)
+    print(elemendid)
+
+    loe_elemendid()
     print(elemendid)
 
 
