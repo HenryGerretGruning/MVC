@@ -31,6 +31,17 @@ def loe_elemendid():
 
 
 
+# loeme KONKREETNE ELEMENT
+def loe_element(nimetus):
+    global elemendid
+    nimetused = []
+    for element in elemendid:
+        if nimetus in element.values():
+            nimetused.append(list(element.values())[0])
+    if nimetus not in nimetused:
+        print("Elemendid {} ei eksisteeri".format(nimetus))
+    else:
+        return elemendid[nimetused.index(nimetus)]
 
 
 def main():
@@ -55,7 +66,7 @@ def main():
     loe_elemendid()
     print(elemendid)
 
-
+    print(loe_element('vein'))
 # käivitamine
 if __name__ == '__main__':
      main()
