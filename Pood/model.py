@@ -1,4 +1,6 @@
-import helpers
+from Pood import helpers
+
+
 class Model:
     # konstruktor
     def __init__(self, elemendid):

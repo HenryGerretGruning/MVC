@@ -1,4 +1,6 @@
-import exceptions
+from Pood import exceptions
+
+
 class Controller:
     def __init__(self, mudel, vaade):
         self.mudel = mudel

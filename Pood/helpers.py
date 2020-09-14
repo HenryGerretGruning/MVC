@@ -1,4 +1,5 @@
-import exceptions
+from Pood import exceptions
+
 elemendid = []
 
 # lisame ELEMENT juurde

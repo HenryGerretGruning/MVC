@@ -1,6 +1,6 @@
-from model import Model
-from view import View
-from controller import Controller
+from Pood.model import Model
+from Pood.view import View
+from Pood.controller import Controller
 
 elemendid = [
     {"nimetus": "leib", "hind":0.80, "kogus": 20},
