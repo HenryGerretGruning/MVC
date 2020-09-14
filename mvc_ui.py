@@ -26,4 +26,6 @@ pood = Controller(Model(elemendid), View())
 ##pood.kustuta_element("vein")
 ##pood.kuva_elemendid()
 
-pood.lisa_element("vein", 0.60, 15)
+pood.lisa_element("kohuke", 0.60, 15)
+print("Lisa veel üks kohuke!")
+pood.lisa_element("kohuke", 0.60, 15)
