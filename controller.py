@@ -23,7 +23,7 @@ class Controller:
         try:
             self.mudel.lisa_element(nimetus, hind, kogus)
             self.vaade.lisa_element(nimetus, hind, kogus)
-        except exceptions.ElementiEiOle as e:
+        except exceptions.ElementJubaOlemas as e:
             self.vaade.veateade_element_juba_olemas(nimetus, e)
 
     # elemendi uuendamine
