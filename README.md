@@ -1,7 +1,7 @@
 # Model View Controller
 
 
-####Henry-Gerret Grüning
+Henry-Gerret Grüning
 * [GITHUB](https://github.com/HenryGerretGruning/OOPLahendused/tree/master/ "Henry-Gerret Grüning Github")
 * ITA19
 * õpilane
