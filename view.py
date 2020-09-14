@@ -13,7 +13,11 @@ class View:
         print("Lisatud {} hinnaga {}EUR koguses {}".format(nimetus, hind, kogus))
 
     def veateade_element_juba_olemas(self, nimetus, veateade):
+        print("=====================================================")
         print("Element {} on juba olemas".format(nimetus))
+        print(veateade)
+        print("=====================================================")
+
 
     def uuenda_element(self, nimetus, vana_hind, vana_kogus, uus_hind, uus_kogus):
         print("Elemendi {} uuendamine".format(nimetus))
