@@ -1,4 +1,4 @@
-
+import pandas as pd
 elemendid = []
 
 # lisame ELEMENT juurde
@@ -27,8 +27,11 @@ def loe_elemendid():
     global elemendid
     loetud_elemendid = []
     for element in elemendid:
+
+
         loetud_elemendid.append(element)
-    return loetud_elemendid
+    df = pd.DataFrame(loetud_elemendid)
+    print(df)
 
 
 
@@ -96,8 +99,8 @@ def main():
     #print(loe_element("vein"))
 
     #kustuta_element("vein")
-    kustutaKÕIK_elemendid()
-    print(loe_elemendid())
+    #kustutaKÕIK_elemendid()
+    #print(loe_elemendid())
 
     #print(loe_element('vein'))
 #käivitamine
