@@ -11,8 +11,11 @@ class Controller:
 
     # elemendi kuvamine
     def kuva_element(self, nimetus):
-        element = self.mudel.loe_element(nimetus)
-        self.vaade.kuva_element(nimetus, element)
+        try:
+            element = self.mudel.loe_element(nimetus)
+            self.vaade.kuva_element(nimetus, element)
+        except exceptions.ElementiEiOle as e:
+            self.vaade.veateade_element_ei_ole(nimetus, e)
 
     # elemendi lisamine
     def lisa_element(self, nimetus, hind, kogus):

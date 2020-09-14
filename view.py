@@ -18,6 +18,12 @@ class View:
         print(veateade)
         print("=====================================================")
 
+    def veateade_element_ei_ole(self, nimetus, veateade):
+        print("=====================================================")
+        print("Elemendi {} lugemise probleem".format(nimetus))
+        print(veateade)
+        print("=====================================================")
+
 
     def uuenda_element(self, nimetus, vana_hind, vana_kogus, uus_hind, uus_kogus):
         print("Elemendi {} uuendamine".format(nimetus))
