@@ -1,4 +1,4 @@
-from Pood import exceptions
+import exceptions
 
 elemendid = []
 
@@ -10,7 +10,6 @@ def lisa_element(nimetus, hind, kogus):
         nimetused.append(list(element.values())[0])
     if nimetus in nimetused:
         raise exceptions.ElementJubaOlemas("Element {} on juba olemas".format(nimetus))
-
     else:
         elemendid.append({"nimetus":nimetus, "hind":hind, "kogus":kogus})
 
@@ -34,8 +33,7 @@ def loe_element(nimetus):
     for element in elemendid:
             nimetused.append(list(element.values())[0])
     if nimetus not in nimetused:
-        raise exceptions.ElementiEiOle("Elementi {} ei eksisteeri".format(nimetus))
-
+        raise exceptions.ElemendiEiOle("Elementi {} ei eksisteeri".format(nimetus))
     else:
        return elemendid[nimetused.index(nimetus)]
 

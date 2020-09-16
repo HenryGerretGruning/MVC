@@ -1,6 +1,4 @@
-from Pood import exceptions
-
-
+import exceptions
 class Controller:
     def __init__(self, mudel, vaade):
         self.mudel = mudel
@@ -16,8 +14,8 @@ class Controller:
         try:
             element = self.mudel.loe_element(nimetus)
             self.vaade.kuva_element(nimetus, element)
-        except exceptions.ElementiEiOle as e:
-            self.vaade.veateade_element_ei_ole(nimetus, e)
+        except exceptions.ElemendiEiOle as e:
+            self.vaade.veateade_elementi_ei_ole(nimetus, e)
 
     # elemendi lisamine
     def lisa_element(self, nimetus, hind, kogus):

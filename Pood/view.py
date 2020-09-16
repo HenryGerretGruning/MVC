@@ -13,16 +13,16 @@ class View:
         print("Lisatud {} hinnaga {}EUR koguses {}".format(nimetus, hind, kogus))
 
     def veateade_element_juba_olemas(self, nimetus, veateade):
-        print("=====================================================")
-        print("Element {} on juba olemas".format(nimetus))
+        print("===============================================")
+        print("Elemendi {} lisamise probleem".format(nimetus))
         print(veateade)
-        print("=====================================================")
+        print("===============================================")
 
-    def veateade_element_ei_ole(self, nimetus, veateade):
-        print("=====================================================")
+    def veateade_elementi_ei_ole(self, nimetus, veateade):
+        print("===============================================")
         print("Elemendi {} lugemise probleem".format(nimetus))
         print(veateade)
-        print("=====================================================")
+        print("===============================================")
 
 
     def uuenda_element(self, nimetus, vana_hind, vana_kogus, uus_hind, uus_kogus):
